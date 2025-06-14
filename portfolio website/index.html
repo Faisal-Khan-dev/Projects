@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faisal Khan | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#home">
+        <h2 class="logo">Faisal <span>Khan</span></h2>
+      </a>
+      <ul class="pages">
+        <li>
+          <a href="#home">Home</a>
+          <div class="effect"></div>
+        </li>
+        <li>
+          <a href="#About">About</a>
+          <div class="effect"></div>
+        </li>
+        <li>
+          <a href="#Services">Services</a>
+          <div class="effect"></div>
+        </li>
+        <li>
+          <a href="#Projects">Projects</a>
+          <div class="effect"></div>
+        </li>
+        <li>
+          <a href="#Contact">Contact me</a>
+          <div class="effect"></div>
+        </li>
+      </ul>
+      <svg onclick="menu()" id="menu" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960"
+        width="30px" fill="#e3e3e3">
+        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+      </svg>
+      <svg onclick="menu()" id="close" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960"
+        width="30px" fill="#e3e3e3">
+        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+      </svg>
+      <ul class="mobile-pages" id="mobile-pages">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Contact">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="home">
+    <div class="section-content">
+      <h2 class="main-heading">Hi, It's <span>Faisal</span></h2>
+      <h3 class="subheading">I'm a <span>Web Developer</span></h3>
+      <p class="para">
+        I’m Faisal Khan, a dedicated web developer who builds modern,
+        responsive websites using HTML, CSS, and JavaScript. Whexther it's a
+        personal brand or a business site, I turn ideas into fast,
+        user-friendly digital experiences.
+      </p>
+      <div class="icons">
+        <a href=""><i class="fa-brands fa-x-twitter fa-2xs"></i></a>
+        <a href=""><i class="fa-brands fa-github fa-2xs"></i></a>
+        <a href=""><i class="fa-brands fa-instagram fa-2xs"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin fa-2xs"></i></a>
+      </div>
+    </div>
+    <div class="img">
+      <div class="hero-img"><img src="./assets/heroimage-1.jpg" width="100%" height="100%" alt=""></div>
+    </div>
+  </section>
+  <section id="About">
+    <div class="img">
+      <div class="hero-img"><img src="./assets/heroimage-2.jpg" width="100%" height="100%" alt=""></div>
+    </div>
+    <div class="section-content about">
+      <h2 class="main-heading">About <span>Me</span></h2>
+      <p class="para">
+        I’m Faisal Khan, a passionate web developer and Computer Science student at Karachi University (UBIT). With a
+        strong foundation in HTML, CSS, and JavaScript, I create responsive, user-focused websites. I’m also learning
+        full-stack development at Saylani Mass IT to strengthen my skills in both front-end and back-end technologies. I
+        love turning ideas into real, functional web experiences.
+      </p>
+      <a href="#Contact"><button>Get in touch.</button></a>
+
+    </div>
+
+    <div class="black" id="black"></div>
+
+
+  </section>
+  <section id="Service">
+    <h2 id="Services">Services<span>.</span></h2>
+    <div class="cards-section">
+      <div class="services-card">
+        <div class="services-card-icon fa-solid fa-mobile-screen "></div>
+        <div class="services-card-heading">Responsive Website Development</div>
+        <div class="services-card-details">I create fully responsive, mobile-friendly websites using HTML, CSS, and
+          JavaScript. Whether it’s a personal blog, business site, or portfolio, I ensure clean code, smooth layout, and
+          a great user experience on all screen sizes. Your website will look and perform perfectly on desktop, tablet,
+          and mobile devices.
+
+        </div>
+      </div>
+      <div class="services-card">
+        <div class="services-card-icon fa-solid fa-file-code "></div>
+        <div class="services-card-heading"> Custom Landing Pages</div>
+        <div class="services-card-details">I design and develop professional landing pages that focus on speed, visual
+          appeal, and high conversion rates. Whether you’re promoting a product, collecting leads, or launching a
+          campaign, I build SEO-friendly pages with clean structure and clear calls-to-action to help you grow your
+          online presence and generate results.</div>
+      </div>
+      <div class="services-card">
+        <div class="services-card-icon fa-solid fa-screwdriver-wrench"></div>
+        <div class="services-card-heading">Website Optimization & Maintenance</div>
+        <div class="services-card-details">I optimize websites for faster loading times, fix layout and performance
+          issues, and provide regular updates to keep everything running smoothly. A well-optimized site improves user
+          experience, SEO rankings, and overall engagement. I also help maintain your codebase so your website stays
+          secure, functional, and up to date.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Project">
+    <h2 id="Projects">Projects<span>.</span></h2>
+    <div class="project-cards-section">
+      <div class="projects-card">
+        <img src="./assets/netflix card pic.png" id="netflix" class="project-cards-image">
+        <div class="projects-card-heading">Netflix Clone</div>
+        <div class="projects-card-details">A fully responsive Netflix homepage clone built using HTML, CSS, and
+          JavaScript, featuring modern UI design, smooth layout, and mobile-friendly user interface experience.
+
+        </div>
+        <button>Review Project</button>
+      </div>
+      <div class="projects-card">
+        <img src="./assets/netflix card pic.png" id="netflix" class="project-cards-image">
+        <div class="projects-card-heading">Netflix Clone</div>
+        <div class="projects-card-details">A fully responsive Netflix homepage clone built using HTML, CSS, and
+          JavaScript, featuring modern UI design, smooth layout, and mobile-friendly user interface experience.
+
+        </div>
+        <button>Review Project</button>
+      </div>
+      <div class="projects-card">
+        <img src="./assets/netflix card pic.png" id="netflix" class="project-cards-image">
+        <div class="projects-card-heading">Netflix Clone</div>
+        <div class="projects-card-details">A fully responsive Netflix homepage clone built using HTML, CSS, and
+          JavaScript, featuring modern UI design, smooth layout, and mobile-friendly user interface experience.
+
+        </div>
+        <button>Review Project</button>
+      </div>
+      <div class="projects-card">
+        <img src="./assets/netflix card pic.png" id="netflix" class="project-cards-image">
+        <div class="projects-card-heading">Netflix Clone</div>
+        <div class="projects-card-details">A fully responsive Netflix homepage clone built using HTML, CSS, and
+          JavaScript, featuring modern UI design, smooth layout, and mobile-friendly user interface experience.
+
+        </div>
+        <button>Review Project</button>
+      </div>
+    </div>
+    <p onclick="modalProjectOpening()" class="see">View all<i class="fa-solid fa-angle-right"></i></p>
+    <div class="modalAbout" id="modalProject">
+      <div class="modal-close ">
+        <div class="fa-solid fa-close" onclick="modalProjectClosing()"></div>
+      </div>
+      <h2><span>All</span> Projects.</h2>
+      <div class="project-cards-section">
+        <div class="projects-card">
+          <img src="./assets/netflix card pic.png" id="netflix" class="project-cards-image">
+          <div class="projects-card-heading">Netflix Clone</div>
+          <div class="projects-card-details">A fully responsive Netflix homepage clone built using HTML, CSS, and
+            JavaScript, featuring modern UI design, smooth layout, and mobile-friendly user interface experience.
+
+          </div>
+          <button>Review Project</button>
+        </div>
+        <div class="projects-card">
+          <img src="./assets/netflix card pic.png" id="netflix" class="project-cards-image">
+          <div class="projects-card-heading">Netflix Clone</div>
+          <div class="projects-card-details">A fully responsive Netflix homepage clone built using HTML, CSS, and
+            JavaScript, featuring modern UI design, smooth layout, and mobile-friendly user interface experience.
+
+          </div>
+          <button>Review Project</button>
+        </div>
+        <div class="projects-card">
+          <img src="./assets/netflix card pic.png" id="netflix" class="project-cards-image">
+          <div class="projects-card-heading">Netflix Clone</div>
+          <div class="projects-card-details">A fully responsive Netflix homepage clone built using HTML, CSS, and
+            JavaScript, featuring modern UI design, smooth layout, and mobile-friendly user interface experience.
+
+          </div>
+          <button>Review Project</button>
+        </div>
+        <div class="projects-card">
+          <img src="./assets/netflix card pic.png" id="netflix" class="project-cards-image">
+          <div class="projects-card-heading">Netflix Clone</div>
+          <div class="projects-card-details">A fully responsive Netflix homepage clone built using HTML, CSS, and
+            JavaScript, featuring modern UI design, smooth layout, and mobile-friendly user interface experience.
+
+          </div>
+          <button>Review Project</button>
+        </div>
+      </div>
+    </div>
+    <p></p>
+  </section>
+
+  <section id="contact">
+    <h2 id="Contact">Contact <span>Me.</span></h2>
+    <form id="contactForm">
+      <div class="form-right">
+        <input type="text" placeholder="Full Name" id="name" name="name" required>
+        <input type="email" placeholder="Email" id="email" name="email" required>
+        <input type="number" placeholder="Phone Number" id="phone" name="phone" required>
+        <input type="text" placeholder="Subject" id="subject" name="subject" required>
+      </div>
+      <div>
+        <textarea type="textarea" placeholder="Your Message..." id="message" name="message" rows="8"
+          required></textarea>
+        <input type="submit" id="submit">
+        <p id="responseMsg"></p>
+      </div>
+    </form>
+  </section>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Todo Application</h1>
+
+<main class="maincontainer">
+
+    <div class="container">
+      <input type="text" id="input" placeholder="enter notes..." />
+      <div class="btnContainer">
+        <button class="addbtn" onclick="createNote()">ADD</button>
+        <button class="delallbtn" onclick="deleteAll()">Delete All</button>
+      </div>
+    </div>
+  </main>
+
+    <div>
+      <ul id="listParent" >  
+        <!-- <li>
+          HELLO WORLD
+          <button>Edit</button>
+          <button>Delete</button>
+          <button>Completed</button>
+        </li>  -->
+      </ul>
+    </div> 
+
+
+
+</body>
+<script src="app.js"></script>
+</html>
