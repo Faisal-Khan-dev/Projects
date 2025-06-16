@@ -22,7 +22,7 @@ body>div {
 
 }
 
-.mainContainer{
+.mainContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,9 +58,7 @@ h2::after {
     text-align: center;
 }
 
-#days::after {
-    content: "Days";
-}
+
 
 #hours::after {
     content: "Hours";
@@ -74,38 +72,26 @@ h2::after {
     content: "Seconds";
 }
 
+#millseconds::after {
+    content: "Milliseconds";
+}
+
 .content p {
     height: 110px;
     width: auto;
 }
 
-@media only screen and (max-width: 560px) {
 
-    h2 {
-        font-size: 39px;
-        height: 60px;
-        width: 60px;
-        border-radius: 10px ;
-    }
 
-    h2::after {
-        font-size: 15px;
-        bottom: -20px;
-    }
-    h4{
-        font-size: 39px;
-    }
-}
-
-.Btns{
+.Btns {
     width: 100%;
     display: flex;
     gap: 30px;
     justify-content: center;
 }
 
-.Btns button{
-    width: 9%;
+.Btns button {
+    width: 100px;
     height: 43px;
     font-size: 16px;
     font-weight: 700;
@@ -118,14 +104,58 @@ h2::after {
     transition: all 0.5s ease;
 }
 
-.Btns button:hover{
+.Btns button:hover {
     scale: 1.07;
     background-color: #B25800;
 }
 
-.stopWatch{
+.stopWatch {
     font-size: 120px;
     font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 3px 3px  black;
+    text-shadow: 3px 3px black;
     color: #D83500;
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .stopWatch {
+        font-size: 60px;
+    }
+    .Btns button{
+        width: 100px;
+    }
+    .mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+}
+}
+
+@media only screen and (max-width: 640px) {
+    .stopWatch{
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 39px;
+        height: 60px;
+        width: 60px;
+        border-radius: 10px;
+    }
+
+    h2::after {
+        font-size: 15px;
+        bottom: -20px;
+    }
+
+    h4 {
+        font-size: 39px;
+    }
+
+    button {
+        width: 200px;
+    }
 }
