@@ -19,7 +19,6 @@ function timer() {
         seconds.innerHTML = sec
     }
 
-    // seconds.innerHTML = sec
     sec++
 
     if (sec == 60) {
@@ -65,8 +64,6 @@ function timer() {
 
 }
 
-
-
 var interval
 
 function startTimer() {
@@ -96,5 +93,4 @@ function resetTimer() {
     seconds.innerHTML = "00"  
 
     startBtn.disabled = false
-
 }
