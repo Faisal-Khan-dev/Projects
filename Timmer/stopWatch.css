@@ -126,6 +126,7 @@ h2::after {
     }
     .Btns button{
         width: 100px;
+        margin-top: 50px;
     }
     .mainContainer {
     display: flex;
