@@ -1,0 +1,167 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+
+}
+
+body>div {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(to bottom right, red, yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+}
+
+.content {
+    /* position: absolute; */
+    display: flex;
+    color: white;
+    font-size: 78px;
+}
+
+input {
+    font-size: 78px;
+    height: 120px;
+    width: 120px;
+    border: 2px solid transparent;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0.9);
+    position: relative;
+    color: white;
+}
+
+input::placeholder {
+  color: white;
+  /* opacity: 1;  */
+}
+
+
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  /* margin: 0; */
+}
+
+.content p {
+    height: 120px;
+    display: flex;
+    padding: 7px 0px;
+}
+
+
+.Btns{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.content div{
+    position: relative;
+}
+
+.content div h4{
+    position: absolute;
+    font-size: 25px;
+    bottom: -35px;
+    width: 100%;
+    text-align: center;
+
+}
+.Btns button{
+    width: 150px;
+    height: 43px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-color: #cd6804;
+    color: white;
+    cursor: pointer;
+    box-shadow: #f7c696 1px 1px 10px 5px;
+    transition: all 0.5s ease;
+}
+
+.Btns button:hover{
+    scale: 1.07;
+    background-color: #B25800;
+}
+
+.timer{
+    font-size: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 3px 3px  black;
+    color: #D83500;
+}
+
+
+@media only screen and (max-width: 666px) {
+      h1.timer{
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+
+    input {
+        font-size: 39px;
+        height: 75px;
+        width: 75px;
+        border-radius: 10px ;
+    }
+
+    .mainContainer{
+        gap: 50px;
+        /* padding-right: 20px; */
+    }
+
+    .content p {
+    height: 60px;
+    font-size: 39.5px;
+    display: flex;
+    padding: 3.5px 0px;
+    margin-top: 25px;
+}
+
+    input::after {
+        font-size: 15px;
+        bottom: -20px;
+        
+    }
+    h4{
+        font-size: 39px;
+    }
+    .content div h4{
+    position: absolute;
+    font-size: 12.5px;
+    bottom: -17.5px;
+    width: 100%;
+    text-align: center;
+
+}
+  
+    .Btns button{
+        width: 75px;
+    height: 43px;
+    font-size: 16px;
+    }
+}
