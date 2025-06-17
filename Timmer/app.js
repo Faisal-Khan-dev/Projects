@@ -1,5 +1,5 @@
 function stopWatch() {
-    window.location = ("./stopwatch.html")
+    window.location = ("./stopWatch")
 }
 
 function timer() {
