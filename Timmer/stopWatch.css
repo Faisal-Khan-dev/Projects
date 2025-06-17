@@ -158,5 +158,6 @@ h2::after {
 
     button {
         width: 200px;
+        margin-top: 0;
     }
 }
