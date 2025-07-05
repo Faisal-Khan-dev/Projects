@@ -45,8 +45,8 @@ function renderUI() {
         parent.innerHTML += `<div class="list">
             <h5>${todoArr[i].todo}</h5>
             <div class=${"listBtn"}>
-                <button onclick = "editTodo(${i})">Edit</button>
-                <button onclick = "delTodo(${i})">Delete</button>
+                <button click = "editTodo(${i})">Edit</button>
+                <button click = "delTodo(${i})">Delete</button>
             </div>
         </div>`
     }

@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.header{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    gap: 10px;
+}
+
+.header img{
+    margin-top: 3px;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightblue;
+    padding: 16px;
+}
+
+.navOptions ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navOptions ul li {
+    cursor: pointer;
+}
+
+.navContainer li:hover {
+    text-decoration: underline;
+}
+
+.todoContainer {
+    width: 50%;
+    margin: 50px auto 40px auto;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+
+.todoForm {
+    padding: 8px;
+    
+}
+
+.todoForm input {
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid lightgrey;
+    padding: 12px 8px; 
+}
+
+
+.todoForm .todoBtn{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.listBtn{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    /* border: 1px solid black; */
+    gap: 10px;
+}
+
+.todoBtn button{
+    width: 120px;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #eeb808;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+.btn {
+    transition: all 0.5s ease;
+}
+.btn:hover{
+    scale: 1.07;
+}
+
+.deleteBtn {
+    background-color: #DD2C00 !important;
+    transition: all 0.5s ease;
+}
+.deleteBtn:hover{
+    scale: 1.07;
+}
+
+.listContainer{
+    width: 50%;
+    margin: 0px auto;
+    
+}
+.listContainer .list{
+     width: 100%;
+    /* border: 1px solid black; */
+    /* margin-bottom: 10px; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px 15px;
+    border-radius: 8px;
+    margin: 10px 0px;
+}
+
+.listContainer h5{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.listContainer button{
+    width: 120px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: #eeb808;
+    font-weight: 600;
+    color: white;
+}
+
+
+.contDelbtn{
+    background-color: #DD2C00 !important;
+    transition: all 0.5s ease;
+}
+.contDelbtn:hover{
+    scale: 1.07;
+}
+.contAddbtn{
+    transition: all 0.5s ease;
+}
+.contAddbtn:hover{
+    scale: 1.07;
+}
+
+.updatebtn:hover{
+    background-color: rgb(127, 212, 240);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .todoContainer {
+    width: 90%; 
+}
+
+}
