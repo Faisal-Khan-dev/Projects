@@ -158,5 +158,8 @@
     .todoContainer {
     width: 90%; 
 }
+.listContainer{
+    width: 90%;
+}
 
 }
