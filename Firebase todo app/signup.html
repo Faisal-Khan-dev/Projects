@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log in</title>
+    <title>Sign Up</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -15,8 +15,17 @@
   </head>
   <body>
     <div class="main-container">
-      <h2>Login</h2>
-      <form onsubmit="return false" class="form-container">
+      <h2>Sign Up</h2>
+      
+      <form  onsubmit="return false" class="form-container">
+        <label for="firstName">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="firstName" placeholder="First Name" /><br /><br />
+        </label>
+        <label for="lastName">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="lastName" placeholder="Last Name" /><br /><br />
+        </label>
         <label for="email">
           <i class="fa-solid fa-envelope"></i>
           <input type="email" id="email" placeholder="Email" /><br /><br />
@@ -26,16 +35,17 @@
           <input
             type="password"
             id="password"
-            placeholder="Password" /><br /><br />
-          <i class="fa-solid fa-eye" onclick="showPass(this)"></i
-        ></label>
-          </form>
-      <button onclick="login()" class="btn">Login</button>
+            placeholder="Password"
+          /><br /><br />
+          <span id="togglePassword"><i class="fa-solid fa-eye" onclick="showPass(this)"></i></span>
+        </label>
+      </form>
+     
+      <button onclick="signUp()" class="btn">Sign Up</button>
       <p class="form-line">
-        Don't have an Account ? <a href='signup.html'>Sign Up</a>
+        Already have an Account ? <a href='index.html'>Login</a>
       </p>
     </div>
+    <script src="signup.js" type="module"></script>
   </body>
-  <script src="app.js" type="module"></script>
-  <!-- <script src="signup.j" type="module"></script> -->
 </html>
