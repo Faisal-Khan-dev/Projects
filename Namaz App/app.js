@@ -20,7 +20,7 @@ const authCheck = () => {
   const uid = localStorage.getItem("uid");
   console.log("uid", uid);
   if(uid){
-    // window.location.replace("./dashboard.html")
+    window.location.replace("./dashboard.html")
   }
 
 };
@@ -40,7 +40,7 @@ async function login() {
 
     localStorage.setItem("uid" , userLogin.user.uid)
     
-    window.location.replace("./todo.html")
+    window.location.replace("./dashboard.html")
   
     
     

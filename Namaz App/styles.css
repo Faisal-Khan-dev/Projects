@@ -15,7 +15,6 @@ body {
   justify-content: center;
 }
 
-
 .main-container {
   /* border: 1px solid red; */
   width: 400px;
@@ -93,6 +92,3 @@ h2 {
 .eye{
     cursor: pointer;
 }
-
-
-

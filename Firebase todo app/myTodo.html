@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="fetchMyTodos()">
+
+
+    <div class="navbarContainer">
+
+        <div class="logoImg">
+            <img src="./image/Firebase_Primary_Vertical_Lockup_Full_Color_Inverted.webp" width="50px" height="60px"
+                alt="">
+        </div>
+
+        <div class="navbarContainerlist">
+            <ul>
+                <li>
+                    <a href="./todo.html">Home</a>
+                </li>
+                <li>
+                    <a href="">My Todo</a>
+                </li>
+                <li><a href="./profile.html">Profile</a></li>
+            </ul>
+        </div>
+
+        <ul>
+            <li class="logout" onclick="logout()">logout</li>
+        </ul>
+
+    </div>
+
+
+   <div class="listContainer" id="cardListing">
+        <!-- <div class="list">
+            <h5>Title</h5>
+            <div class="listBtn">
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div> -->
+    </div>
+
+
+
+</body>
+<script type="module" src="myTodo.js"></script>
+
+</html>

@@ -8,7 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="render">
+<body onload="fetchUserData();fetchTodos()">
+
+
+    <div class="navbarContainer">
+
+        <div class="logoImg">
+            <img src="./image/Firebase_Primary_Vertical_Lockup_Full_Color_Inverted.webp" width="50px" height="60px" alt="">
+        </div>
+
+        <div class="navbarContainerlist">
+             <ul>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="./myTodo.html">My Todo</a>
+        </li>
+        <li><a href="./profile.html">Profile</a></li>
+      </ul>
+        </div>
+
+      <ul>
+        <li class="logout" onclick="logout()">logout</li>
+      </ul>
+           
+    </div>
 
     <!-- <h1>DASHBOARD PAGE</h1>
     <h1>USER NAME</h1> -->
@@ -42,7 +67,7 @@
 
 
         <div class="todoForm">
-            <input type="text" placeholder="Enter your todo..." id="input">
+            <input type="text" placeholder="Enter your todo..." id="todoTitle">
             <div class="todoBtn">
                 <button class="btn" onclick="addTodo()">ADD</button>
                 <button onclick="delAllTodos()" class="deleteBtn">Delete All </button>
@@ -53,7 +78,7 @@
 
 
 
-    <div class="listContainer" id="listContainerid">
+    <div class="listContainer" id="cardListing">
         <!-- <div class="list">
             <h5>Title</h5>
             <div class="listBtn">

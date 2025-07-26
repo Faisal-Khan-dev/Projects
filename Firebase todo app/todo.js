@@ -1,102 +1,125 @@
-import { app, db, collection, addDoc, getDocs, doc, deleteDoc, updateDoc } from "./firebase.js"
+import { addDoc, collection, db, doc, getDoc, getDocs, deleteDoc, updateDoc } from "./firebase.js";
 
-const addBtn = document.getElementById("addBtn")
-const input = document.getElementById("input") 
-const parent = document.getElementById("listContainerid")
-const todoCollection = collection(db, "todos")
+let userData;
 
-// addBtn.addEventListener("click", addTodo)
-window.addEventListener("load", renderUI)
 
-async function addTodo() {
-    try {
-        if (!input.value) {
-            alert("Enter todo value")
-            return
-        }
+const privateRouteCheck = () => {
+  const uid = localStorage.getItem("uid");
+  console.log("privateRouteCheck", uid);
+  if(!uid){
+    window.location.replace("./index.html")
+  }
 
-        const todoObj = {
-            todo: input.value.trim()
-        }
+};
 
-        const docRef = await addDoc(todoCollection, todoObj)
-        // console.log("Document written with ID: ", docRef.id);
-        input.value = ""
 
-        await renderUI()
+window.addEventListener("load" , privateRouteCheck)
 
-    } catch (error) {
-        console.log("Error", error.message)
+const fetchUserData = async () => {
+  const userUid = localStorage.getItem("uid");
+  //   console.log("HELLO DASHBOARD", userUid);
+  const user = await getDoc(doc(db, "users", userUid));
+  console.log("user", user.data());
+  userData = user.data();
+};
+
+const addTodo = async () => {
+  try {
+    const todoTitle = document.getElementById("todoTitle");
+    // const todoDesc = document.getElementById("todoDesc");
+
+    if (!todoTitle.value) {
+      alert("required field missing!");
+      return;
     }
-}
 
-async function renderUI() {
-    try {
-        const querySnapshot = await getDocs(todoCollection)
-        const arr = []
+    const todoObj = {
+      title: todoTitle.value,
+    //   desc: todoDesc.value,
+      uid: userData.uid,
+      userName: userData.firstName + " " + userData.lastName,
+      userEmail: userData.email,
+    };
+    console.log("todoObj", todoObj);
 
-        querySnapshot.forEach((doc) => {
-            const updatedTodoobj = {
-                ...doc.data(), // 
-                id: doc.id
-            }
-            arr.push(updatedTodoobj)
-            console.log("Array" , arr);
-            
-        })
+    await addDoc(collection(db, "todos"), todoObj);
+    alert("Todo Created!");
+    fetchTodos()
+  } catch (error) {
+    alert(error.message);
+  }
+};
 
-        parent.innerHTML = ""
+const fetchTodos = async () => {
+  const querySnapShot = await getDocs(collection(db, "todos"));
 
-        for (var i = 0; i < arr.length; i++) {
-            parent.innerHTML += `<div class="list">
-                <h5>${arr[i].todo}</h5>
+  const tempArr = [];
+  querySnapShot.forEach((doc) => {
+    // console.log("doc", doc.data());
+    // console.log("doc id", doc.id);
+    const obj = {
+      ...doc.data(),
+      id: doc.id,
+      };
+        console.log("obj", obj);
+
+    tempArr.push(obj);
+  });
+  console.log("tempArr", tempArr);
+
+  const cardListing = document.getElementById("cardListing");
+  cardListing.innerHTML = ""
+//   for (const obj of tempArr) {
+    // console.log("obj", obj);
+
+    for (var i = 0; i < tempArr.length; i++) {
+            cardListing.innerHTML += `<div class="list">
+                <h5>${tempArr[i].title}</h5>
                 <div class="listBtn">
-                    <button class = "contAddbtn" onclick="editTodo('${arr[i].id}', '${arr[i].todo}')">Edit</button>
-                    <button class = "contDelbtn" onclick="delTodo('${arr[i].id}')">Delete</button>
+                    <button class = "contAddbtn" onclick="editTodo('${tempArr[i].id}', '${tempArr[i].title}')">Edit</button>
+                    <button class = "contDelbtn" onclick="delTodo('${tempArr[i].id}')">Delete</button>
                 </div>
             </div>`
         }
+};
 
-    } catch (error) {
-        console.log("Error", error.message)
-    }
-}
 
-async function editTodo(id , todo) {
+
+async function editTodo(id , title) {
     // console.log("hello world");
 
     try {
 
-        
         // console.log(id, "id");
-        
-        var editTodo = prompt("enter todo", todo)
+        var editTodo = prompt("enter todo", title)
         if (!editTodo) return;
      
         const updatedObj = {
-            todo: editTodo
+            title: editTodo
         }
    
 
     await updateDoc(doc(db, "todos", id), updatedObj);
         alert("updated successfully");
-        await renderUI()
+        await fetchTodos()
   } catch (error) {
     alert(error.message);
   }
     
 }
 
-async function delTodo(id) {
+
+
+async function delTodo(ele) {
 
      try {
     // await deleteDoc(doc(database , collectionName , docID - UID))
-    await deleteDoc(doc(db, "todos", id));
+    await deleteDoc(doc(db, "todos", ele));
          alert("Deleted Successfully");
-         await renderUI()
+         await fetchTodos()
          
   } catch (error) {
-      console.log("error" , error.message); 
+      console.log("error" , error.message);
   }
 }
 
@@ -112,15 +135,22 @@ async function delAllTodos() {
 
         await Promise.all(array);
         alert("All todos deleted");
-        await renderUI()
+        await fetchTodos()
     } catch (error) {
         console.error("Error deleting documents: ", error.message);
     }
 }
 
+function logout() {
+  window.location.replace("./index.html")
+}
 
+
+
+window.fetchUserData = fetchUserData;
 window.addTodo = addTodo;
-window.renderUI = renderUI;
 window.editTodo = editTodo;
+window.fetchTodos = fetchTodos;
 window.delTodo = delTodo;
 window.delAllTodos = delAllTodos;
+window.logout = logout;

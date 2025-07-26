@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaz App</title>
+    <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body onload="renderUI()">
+    <section class="header">
+        <nav>
+            <a href="#">
+                <h1 class="navH1">Namaz Tracker</h1>
+            </a>
+            <ul class="nav-items">
+                <a href="./dashboard.html">
+                    <li>Home</li>
+                </a>
+                <a href="history.html">
+                    <li>History</li>
+                </a>
+
+                <li onclick="logOut()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path
+                            d="M200-120q-33 0-56.5-23.5T120-200v-160h80v160h560v-560H200v160h-80v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm220-160-56-58 102-102H120v-80h346L364-622l56-58 200 200-200 200Z" />
+                    </svg></li>
+            </ul>
+            <svg onclick="menu()" id="menu" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960"
+                width="30px" fill="#e3e3e3">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+            <svg onclick="menu()" id="close" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960"
+                width="30px" fill="#e3e3e3">
+                <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+            <ul class="mobile-pages" id="mobile-pages">
+                <a href="./dashboard.html">
+                    <li>Home</li>
+                </a>
+                <a href="./history.html">
+                    <li>History</li>
+                </a>
+                <li onclick="logOut()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path
+                            d="M200-120q-33 0-56.5-23.5T120-200v-160h80v160h560v-560H200v160h-80v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm220-160-56-58 102-102H120v-80h346L364-622l56-58 200 200-200 200Z" />
+                    </svg></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="dashContainer">
+
+     <div class="container" id= "container">
+    <!-- <h1>🕌 Namaz Tracker</h1>
+    <p class="date">🗓️ Date: 22 July 2025</p>
+
+    <div class="tracker">
+
+      <div class="prayer-card">
+        <div class="left">
+          <span class="prayer-name" id="fajr">Fajr</span>
+          <span class="status pending">❗ Pending</span>
+        </div>
+        <div class="actions">
+          <span class="btn done" onclick="namazDone()">✅ Done</span>
+          <span class="btn qaza">⏱️ Qaza</span>
+        </div>
+      </div>
+
+      <div class="prayer-card">
+        <div class="left">
+          <span class="prayer-name" id="dhuhr">Dhuhr</span>
+          <span class="status pending">❗ Pending</span>
+        </div>
+        <div class="actions">
+          <span class="btn done" onclick="namazDone()">✅ Done</span>
+          <span class="btn qaza">⏱️ Qaza</span>
+        </div>
+      </div>
+
+      <div class="prayer-card">
+        <div class="left">
+          <span class="prayer-name" id="asr">Asr</span>
+          <span class="status pending">❗ Pending</span>
+        </div>
+        <div class="actions">
+          <span class="btn done" onclick="namazDone()">✅ Done</span>
+          <span class="btn qaza">⏱️ Qaza</span>
+        </div>
+      </div>
+
+      <div class="prayer-card">
+        <div class="left">
+          <span class="prayer-name" id="maghrib">Maghrib</span>
+          <span class="status pending">❗ Pending</span>
+        </div>
+        <div class="actions">
+          <span class="btn done" onclick="namazDone()">✅ Done</span>
+          <span class="btn qaza">⏱️ Qaza</span>
+        </div>
+      </div>
+
+      <div class="prayer-card">
+        <div class="left">
+          <span class="prayer-name" id="isha">Isha</span>
+          <span class="status pending">❗ Pending</span>
+        </div>
+        <div class="actions">
+          <span class="btn done" onclick="namazDone()">✅ Done</span>
+          <span class="btn qaza">⏱️ Qaza</span>
+        </div>
+      </div>
+ -->
+    <!-- </div> -->
+  </div>
+</section>
+
+</body>
+<script src="dashboard.js" type="module"></script>
+
+
+</html>

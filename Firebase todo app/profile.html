@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>s
-  <body onload="authCheck()">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="renderUI()">
+
+    <div class="navbarContainer">
+
+        <div class="logoImg">
+            <img src="./image/Firebase_Primary_Vertical_Lockup_Full_Color_Inverted.webp" width="50px" height="60px" alt="">
+        </div>
+
+        <div class="navbarContainerlist">
+             <ul>
+        <li>
+          <a href="./todo.html">Home</a>
+        </li>
+        <li>
+          <a href="./myTodo.html">My Todo</a>
+        </li>
+        <li><a href="">Profile</a></li>
+      </ul>
+        </div>
+
+      <ul>
+        <li class="logout" onclick="logout()">logout</li>
+      </ul>
+           
     <div class="main-container">
-      <h2>Sign Up</h2>
+      <h2>User Profile</h2>
       
       <form  onsubmit="return false" class="form-container">
         <label for="firstName">
@@ -41,11 +57,10 @@
         </label>
       </form>
      
-      <button onclick="signUp()" class="btn">Sign Up</button>
-      <p class="form-line">
-        Already have an Account ? <a href='index.html'>Login</a>
-      </p>
+      
     </div>
-    <script src="signup.js" type="module"></script>
-  </body>
+
+    
+</body>
+<script type="module" src="profile.js"></script>
 </html>
